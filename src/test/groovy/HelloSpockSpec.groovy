@@ -1,5 +1,3 @@
-package test.groovy;
-
 /**
  * Created by alberto on 3/26/15.
  */
