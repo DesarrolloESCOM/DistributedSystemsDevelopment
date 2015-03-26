@@ -2,3 +2,5 @@
 **/out
 **/dist
 **/*.odt
+*.iml
+.idea
