@@ -4,3 +4,4 @@
 **/*.odt
 *.iml
 .idea
+.gradle
