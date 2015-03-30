@@ -1,8 +1,9 @@
 **/*.class
 **/out
 **/dist
-**/*.odt*
+*.odt
 *.iml
+*.class
 .idea
 .gradle
 build
