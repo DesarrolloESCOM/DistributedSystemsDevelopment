@@ -1,7 +1,7 @@
 **/*.class
 **/out
 **/dist
-/**/*.odt
+**/*.odt*
 *.iml
 .idea
 .gradle
