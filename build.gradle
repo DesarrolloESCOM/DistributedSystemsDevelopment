@@ -12,3 +12,22 @@ dependencies {
     compile 'log4j:log4j:1.2.17'
     testCompile "junit:junit:4.11"
 }
+/*
+* Gradle tasks for Exercise #1
+* */
+
+task Ex1_ServerInstance (dependsOn:'classes',type:JavaExec){
+    description = "Executes the server instance"
+    main = 'exercises.EX1.server.Server'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task Ex1_ClientInstance (dependsOn:'classes',type:JavaExec){
+    description = "Executes the client instance"
+    main = 'exercises.EX1.gui.MainGui'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+/*
+* Gradle tasks for Exercise #1
+* */

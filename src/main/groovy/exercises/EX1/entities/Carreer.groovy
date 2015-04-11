@@ -1,4 +1,4 @@
-package excersices.EX1.Entities
+package exercises.EX1.entities
 
 /**
  * Created by alberto on 3/31/15.

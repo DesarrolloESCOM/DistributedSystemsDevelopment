@@ -1,5 +1,5 @@
 import spock.lang.Shared
-import excersices.EX2.Calculator
+import exercises.EX2.Calculator
 
 /**
  * Created by alberto on 3/27/15.
