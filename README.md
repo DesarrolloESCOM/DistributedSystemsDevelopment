@@ -29,3 +29,19 @@ $ ./gradlew Ex1_ServerInstance
 ```bash
 $ ./gradlew test
 ```
+
+## Practice/Homework/Exercise Index
+
+### Exercises
+ * [Ex#1 - School Management](src/main/groovy/exercises/EX1/README.md)
+ 
+ 
+### Howeworks
+ * [Hw#1 - Time Server](src/main/groovy/homeworks/EX1/README.md)
+ 
+
+### Practices
+
+
+## Contact
+Any doubts about it! Try to contact me! [Twitter](http://twitter.com/jresendiz27)
