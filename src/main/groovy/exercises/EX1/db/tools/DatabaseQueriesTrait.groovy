@@ -4,6 +4,14 @@ package exercises.EX1.db.tools
  * Created by alberto on 3/31/15.
  */
 trait DatabaseQueriesTrait {
+    def final operators = [
+            'equal'             : '=',
+            'lessThan'          : '<',
+            'greaterThan'       : '>',
+            'lessOrEqualThan'   : '<=',
+            'greaterOrEqualThan': '>='
+    ]
+
     def getAll(def entity) {
         """select (${
             (entity.properties.findAll {
@@ -24,10 +32,13 @@ trait DatabaseQueriesTrait {
         def query = getAll(entity, fields) + " where "
         def size = conditions.size()
         conditions.eachWithIndex { it, index ->
-            if (it.value.class.getSimpleName() in ['String', 'GStringImp']) {
-                query += "${it.key} like '${it.value}'"
-            } else {
-                query += "${it.key}=${it.value}"
+            it.each { property ->
+                println(property)
+                if (property.value.class.getSimpleName() in ['String', 'GStringImp']) {
+                    query += "${property.key} ${operators[it.key]} '${property.value}'"
+                } else {
+                    query += "${property.key}${operators[it.key]}${property.value}"
+                }
             }
             if (index < size - 1) {
                 query += " and "
