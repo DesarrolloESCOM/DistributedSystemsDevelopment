@@ -4,10 +4,10 @@ package exercises.EX1.entities
  * Created by alberto on 3/31/15.
  */
 class Student {
-    Integer _Id
+    Integer id
     String name
-    String LastName
+    String lastName
     Date birthDate
-    Integer carreer
+    Integer career
     String email
 }

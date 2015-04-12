@@ -1,4 +1,4 @@
-package exercises.EX1.dao
+package exercises.EX1.db.tools
 
 /**
  * Created by alberto on 3/31/15.
