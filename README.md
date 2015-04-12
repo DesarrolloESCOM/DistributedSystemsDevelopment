@@ -37,7 +37,7 @@ $ ./gradlew test
  
  
 ### Howeworks
- * [Hw#1 - Time Server](src/main/groovy/homeworks/EX1/README.md)
+ * [Hw#1 - Time Server](src/main/groovy/homeworks/HW1/README.md)
  
 
 ### Practices
