@@ -1,0 +1,47 @@
+// GET ALL
+{
+	"operation":"getAll",
+	"entity":"Student"
+},
+// GET ALL WITH PROYECTION
+{
+	"operation":"getAll",
+	"entity":"Student",
+	"fields":["id","name"]
+},
+// FIND BY SPECIFIC CONDITIONS
+{
+	"operation":"findBy",
+	"entity":"Student",
+	"fields":["id","name"],
+	"conditions":{
+		"equal":{
+			"id":1
+		},
+		"like":{
+			"lastName":"Alberto"
+		}
+	}|
+},
+// INSERT
+{
+	"operation":"insert",
+	"entity":"Student",
+	"values":{
+		"id":1,
+		"name":"Juan"
+	}
+},
+// DELETE
+{
+	"operation":"delete",
+	"entity":"Student",
+	"conditions":{
+		"equal":{
+			"id":1
+		},
+		"like":{
+			"lastName":"Rese%"
+		}
+	}
+}
