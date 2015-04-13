@@ -34,12 +34,12 @@ class DatabaseQueriesSpec extends spock.lang.Specification {
         expect:
         testInstance.findBy(entity, filter, conditions) == result
         where:
-        entity                                     | filter          | conditions                                      || result
-        new Student([id: 1, name: 'pepo'])         | ['id']          | [equal: [id: 20]]                               || "select (id) from Student where id=20"
-        new Student([id: 1, name: 'pepo'])         | ['id']          | [lessThan: [id: 20]]                            || "select (id) from Student where id<20"
-        new Student([id: 1, name: 'pepo'])         | ['id']          | [greaterThan: [id: 20]]                         || "select (id) from Student where id>20"
-        new Student([id: 1, name: 'pepo'])         | ['id']          | [lessOrEqualThan: [id: 20]]                     || "select (id) from Student where id<=20"
-        new Student([id: 1, name: 'pepo'])         | ['id']          | [greaterOrEqualThan: [id: 20]]                  || "select (id) from Student where id>=20"
-        new Career([id: 1, description: 'Doctor']) | ['description'] | [equal: [id: 20], like: [description: '%Des%']] || "select (description) from Career where id=20 and description like '%Des%'"
+        entity                                     | filter          | conditions                                            || result
+        new Student([id: 1, name: 'pepo'])         | ['id']          | [and: [equal: [id: 20]]]                              || "select (id) from Student where id=20"
+        new Student([id: 1, name: 'pepo'])         | ['id']          | [and: [lessThan: [id: 20]]]                           || "select (id) from Student where id<20"
+        new Student([id: 1, name: 'pepo'])         | ['id']          | [and: [greaterThan: [id: 20]]]                        || "select (id) from Student where id>20"
+        new Student([id: 1, name: 'pepo'])         | ['id']          | [and: [lessOrEqualThan: [id: 20]]]                    || "select (id) from Student where id<=20"
+        new Student([id: 1, name: 'pepo'])         | ['id']          | [or: [greaterOrEqualThan: [id: 20]]]                  || "select (id) from Student where id>=20"
+        new Career([id: 1, description: 'Doctor']) | ['description'] | [or: [equal: [id: 20], like: [description: '%Des%']]] || "select (description) from Career where id=20 or description like '%Des%'"
     }
 }

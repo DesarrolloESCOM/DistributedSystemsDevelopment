@@ -9,7 +9,8 @@ trait DatabaseQueriesTrait {
             'lessThan'          : '<',
             'greaterThan'       : '>',
             'lessOrEqualThan'   : '<=',
-            'greaterOrEqualThan': '>='
+            'greaterOrEqualThan': '>=',
+            'like'              : ' like '
     ]
 
     def getAll(def entity) {
@@ -30,21 +31,21 @@ trait DatabaseQueriesTrait {
 
     def findBy(def entity, def fields, def conditions) {
         def query = getAll(entity, fields) + " where "
-        def size = conditions.size()
-        conditions.eachWithIndex { it, index ->
-            it.each { property ->
-                println(property)
-                if (property.value.class.getSimpleName() in ['String', 'GStringImp']) {
-                    query += "${property.key} ${operators[it.key]} '${property.value}'"
-                } else {
-                    query += "${property.key}${operators[it.key]}${property.value}"
+        def results = conditions.collect { logic ->
+            def logicOperators = logic.value.collect { sqlOperator ->
+                def sqlOperators = sqlOperator.value.collect { condition ->
+                    if (condition.value.class.getSimpleName() in ['String', 'GStringImp']) {
+                        return "${condition.key}${operators[sqlOperator.key ?: 'like']}'${condition.value}'"
+                    } else {
+                        return "${condition.key}${operators[sqlOperator.key]}${condition.value}"
+                    }
                 }
+                return sqlOperators.join(' ' + logic.key + ' ')
             }
-            if (index < size - 1) {
-                query += " and "
-            }
+            return logicOperators.join(' ' + logic.key + ' ')
         }
-        query
+        query += results.size() > 1 ? results.join(' ') : results[0]
+        return query
     }
 
 
