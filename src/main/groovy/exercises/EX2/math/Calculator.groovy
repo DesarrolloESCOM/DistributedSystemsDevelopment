@@ -1,12 +1,10 @@
-package exercises.EX2
+package exercises.EX2.math
 
 /**
  * Created by alberto on 3/27/15.
  */
-import org.apache.log4j.*
 import groovy.util.logging.*
 
-@Log4j
 class Calculator implements Operations {
 
 

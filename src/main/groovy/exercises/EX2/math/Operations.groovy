@@ -1,4 +1,4 @@
-package exercises.EX2
+package exercises.EX2.math
 
 /**
  * Created by alberto on 3/27/15.
