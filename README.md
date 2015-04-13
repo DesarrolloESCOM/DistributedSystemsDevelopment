@@ -27,7 +27,7 @@ Step 2: Look into gradle tasks.
 ```bash
 $ ./gradlew tasks
 ```
-Then run the selected tasks to be run, for example:
+Look for a task and then run it!, for example:
 
 ```bash
 $ ./gradlew Ex1_ServerInstance
