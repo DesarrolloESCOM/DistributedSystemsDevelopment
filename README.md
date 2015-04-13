@@ -34,6 +34,7 @@ $ ./gradlew test
 
 ### Exercises
  * [Ex#1 - School Management](src/main/groovy/exercises/EX1/README.md)
+ * [Ex#2 - Socket Calculator](src/main/groovy/exercises/EX2/README.md)
  
  
 ### Howeworks
