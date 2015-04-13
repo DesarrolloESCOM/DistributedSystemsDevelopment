@@ -10,6 +10,12 @@ Repository for some homeworks of my school's subject Distributed Systems Develop
 
 ## How could I run a homework/practice?
 
+Step 0: Clone the project in your terminal.
+```bash
+git clone https://github.com/pepo27/DSD.git
+```
+or simply download the zip file and extract it.
+
 Step 1: Run gradle for solving all the dependencies.
 
 ```bash
