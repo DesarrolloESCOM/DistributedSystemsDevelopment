@@ -42,4 +42,13 @@ class DatabaseQueriesSpec extends spock.lang.Specification {
         new Student([id: 1, name: 'pepo'])         | ['id']          | [or: [greaterOrEqualThan: [id: 20]]]                  || "select (id) from Student where id>=20"
         new Career([id: 1, description: 'Doctor']) | ['description'] | [or: [equal: [id: 20], like: [description: '%Des%']]] || "select (description) from Career where id=20 or description like '%Des%'"
     }
+
+    def "Should create an insert query from given fields and values"() {
+        expect:
+        testInstance.insert(entity) == result
+        where:
+        entity                                                                             || result
+        new Student([id: 1, name: 'pepo', lastName: 'resendiz', email: 'pepo27@pepo.com']) || "insert into Student (email,lastName,name) values ('pepo27@pepo.com','resendiz','pepo')"
+        new Career([id: 1, description: 'Doctor'])                                         || "insert into Career (description) values ('Doctor')"
+    }
 }

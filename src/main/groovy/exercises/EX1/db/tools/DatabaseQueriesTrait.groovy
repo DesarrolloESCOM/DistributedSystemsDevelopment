@@ -50,7 +50,26 @@ trait DatabaseQueriesTrait {
 
 
     def insert(def entity) {
-
+        def validProperties = []
+        entity.properties.each { prop, value ->
+            if (!(prop.toLowerCase() in ['id', '_id', 'class', 'metaClass'])) {
+                if (value) {
+                    return validProperties.add(prop)
+                }
+            }
+        }
+        validProperties.sort()
+        """insert into ${entity.class.getSimpleName()} (${
+            validProperties.join(',')
+        }) values (${
+            validProperties.collect { prop ->
+                if (entity.properties[prop].class.getSimpleName() in ['String', 'GStringImp']) {
+                    return "'${entity.properties[prop]}'"
+                } else {
+                    return "${entity.properties[prop]}"
+                }
+            }.join(',')
+        })"""
     }
 
     def delete(def entity) {
