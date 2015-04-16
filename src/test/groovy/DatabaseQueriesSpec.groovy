@@ -51,4 +51,12 @@ class DatabaseQueriesSpec extends spock.lang.Specification {
         new Student([id: 1, name: 'pepo', lastName: 'resendiz', email: 'pepo27@pepo.com']) || "insert into Student (email,lastName,name) values ('pepo27@pepo.com','resendiz','pepo')"
         new Career([id: 1, description: 'Doctor'])                                         || "insert into Career (description) values ('Doctor')"
     }
+
+    def "Should create an update query from a given entity, fields and conditions"() {
+        expect:
+        testInstance.update(entity) == result
+        where:
+        entity || result
+        true   || true
+    }
 }
