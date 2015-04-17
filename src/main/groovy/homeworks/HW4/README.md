@@ -18,7 +18,7 @@ With an embedded applet we can use or work with remote objects. A Greeting objec
 
 On repository root folder, we just need to execute the next commands.
 
-Server: 
+Server:
 ```
 ./gradlew Ex2_ServerInstance
 ```
