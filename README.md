@@ -39,17 +39,17 @@ $ ./gradlew test
 ## Practice/Homework/Exercise Index
 
 ### Exercises
- * [Ex#1 - School Management](src/main/groovy/exercises/EX1/README.md)
- * [Ex#2 - Socket Calculator](src/main/groovy/exercises/EX2/README.md)
+ * [Ex#1 - School Management](src/main/groovy/exercises/EX1/README.md) *Deadline: 10-10-2015*
+ * [Ex#2 - Socket Calculator](src/main/groovy/exercises/EX2/README.md) *Deadline: 10-10-2015*
  
  
 ### Howeworks
- * [Hw#1 - Time Server](src/main/groovy/homeworks/HW1/README.md)
- * [Hw#4 - Hello via RMI]((src/main/groovy/homeworks/HW4/README.md))
+ * [Hw#1 - Time Server](src/main/groovy/homeworks/HW1/README.md) *Deadline: 10-10-2015*
+ * [Hw#4 - Hello via RMI](src/main/groovy/homeworks/HW4/README.md) *Deadline: 10-10-2015*
  
 
 ### Practices
-
+ * [Pr#1 - Simple Bank System ](src/main/groovy/practices/PR1/README.md) *Deadline: 10-10-2015*
 
 ## Contact
 Any doubts about it! Try to contact me! [Twitter](http://twitter.com/jresendiz27)
