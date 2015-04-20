@@ -60,11 +60,11 @@ $ ./gradlew test
  * [Hw#11 - Sockets and JDBC](src/main/groovy/homeworks/HW11/README.md) Deadline: **15-04-2015**
  * [Hw#12 - Vidis](src/main/groovy/homeworks/HW12/README.md) Deadline: **20-04-2015**
  * [Hw#13 - Hello via RMI](src/main/groovy/homeworks/HW13/README.md) Deadline: **15-04-2015**
- * [Hw#14 - Java Policy](src/main/groovy/homeworks/HW14/README.md) Deadline: **15-04-2015**
+ * [Hw#14 - Java Policy](src/main/groovy/homeworks/HW14/README.md) Deadline: **20-04-2015**
  
 
 ### Practices
  * [Pr#1 - Simple Bank System ](src/main/groovy/practices/PR1/README.md) Deadline: **22-04-2015**
 
 ## Contact
-Any doubts about it! Try to contact me! [Twitter](http://twitter.com/jresendiz27)
+Any doubts about it! Try to contact me! [Twitter](http://twitter.com/jresendiz27)	
