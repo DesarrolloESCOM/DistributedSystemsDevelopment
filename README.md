@@ -42,7 +42,8 @@ $ ./gradlew test
 
  * [Ex#1 - School Management](src/main/groovy/exercises/EX1/README.md) Deadline: **22-04-2015**
  * [Ex#2 - Socket Calculator](src/main/groovy/exercises/EX2/README.md) Deadline: **13-04-2015**
- * [Ex#3 - Lamport Simulation](src/main/groovy/exercises/EX3/README.md) Deadline: **15-04-2015**
+ * [Ex#3 - Lamport Simulation](src/main/groovy/exercises/EX3/README.md) Deadline: **19-04-2015**
+ * [Ex#4 - RMI Calculator](src/main/groovy/exercises/EX4/README.md) Deadline: **22-04-2015**
  
  
 ### Howeworks
@@ -57,8 +58,9 @@ $ ./gradlew test
  * [Hw#9 - Syncrhonization](src/main/groovy/homeworks/HW9/README.md) Deadline: **16-04-2015**
  * [Hw#10 - Lamport](src/main/groovy/homeworks/HW10/README.md) Deadline: **16-04-2015**
  * [Hw#11 - Sockets and JDBC](src/main/groovy/homeworks/HW11/README.md) Deadline: **15-04-2015**
- * [Hw#12 - Vidis](src/main/groovy/homeworks/HW4/README.md) Deadline: **20-04-2015**
- * [Hw#13 - Hello via RMI](src/main/groovy/homeworks/HW4/README.md) Deadline: **15-04-2015**
+ * [Hw#12 - Vidis](src/main/groovy/homeworks/HW12/README.md) Deadline: **20-04-2015**
+ * [Hw#13 - Hello via RMI](src/main/groovy/homeworks/HW13/README.md) Deadline: **15-04-2015**
+ * [Hw#14 - Java Policy](src/main/groovy/homeworks/HW14/README.md) Deadline: **15-04-2015**
  
 
 ### Practices
