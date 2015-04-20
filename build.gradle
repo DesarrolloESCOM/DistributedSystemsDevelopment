@@ -43,3 +43,17 @@ task Ex2_ClientInstance (dependsOn:'classes',type:JavaExec){
     main = 'exercises.EX2.gui.CalculatorFrame'
     classpath = sourceSets.main.runtimeClasspath
 }
+
+/*
+* Gradle tasks for Exercise #3
+* */
+
+task Ex3_LamportSimulation (dependsOn:'classes',type:JavaExec){
+    description = "Exercise 3: Lamport's simulation"
+    main = 'exercises.EX3.DCSystem'
+    classpath = sourceSets.main.runtimeClasspath
+    if(project.hasProperty('args')){
+        println "Has args!!! ${project.args}"
+        args project.args.split(',')
+    }
+}
