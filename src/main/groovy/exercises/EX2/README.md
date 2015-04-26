@@ -17,7 +17,11 @@ elementToBeFound;item1,item2,item3,...,itemN
 # Pictures
 
 ![Ex2](./images/1.png)
+
+
 ![Ex2](./images/2.png)
+
+
 ![Ex2](./images/3.png)
 
 # How to run it?
