@@ -57,3 +57,19 @@ task Ex3_LamportSimulation (dependsOn:'classes',type:JavaExec){
         args project.args.split(',')
     }
 }
+
+/*
+* Gradle tasks for Exercise #4
+* */
+
+/*task Ex4_RMI_Compile (type:GroovyCompile){
+    description = "Exercise 4: Compile rmi classes"
+    source = sourceSets.main.java.exercises.EX4.rmi
+    classpath = sourceSets.main.runtimeClasspath
+    desinationDir = 'build/rmi'
+}
+
+task Ex4_RMI_Stub (type:GroovyCompile){
+    description = "Exercise 4: Generate Stubs"
+    source = sourceSets.main.java.exercises.EX4.rmi
+}*/
