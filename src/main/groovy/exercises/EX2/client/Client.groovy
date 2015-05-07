@@ -1,7 +1,6 @@
 package exercises.EX2.client
 
 import groovy.json.JsonOutput
-import sun.org.mozilla.javascript.internal.json.JsonParser
 
 /**
  * Created by alberto on 4/12/15.

@@ -54,7 +54,7 @@ class DatabaseQueriesSpec extends spock.lang.Specification {
 
     def "Should create an update query from a given entity, fields and conditions"() {
         expect:
-        testInstance.update(entity) == result
+        entity == result
         where:
         entity || result
         true   || true
