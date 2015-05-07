@@ -1,14 +1,24 @@
-package exercises.EX2.math
+package exercises.EX4.rmi.remoteserver
+
+import exercises.EX4.rmi.interfaces.RemoteInterface
+
+import java.rmi.RemoteException;
+import java.rmi.UnexpectedException;
+import java.rmi.server.UnicastRemoteObject;
 
 /**
- * Created by alberto on 3/27/15.
+ * Created by alberto on 5/6/15.
  */
-import groovy.util.logging.*
+public class RMIImplementation extends UnicastRemoteObject implements RemoteInterface {
 
-class Calculator implements Operations {
+    protected RMIImplementation() throws RemoteException {
+        super();
+    }
+
+    private static final long serialVersionUID = 1L;
 
     @Override
-    Double sum(def List elements) {
+    Double sum(def List elements) throws RemoteException {
         if (elements) {
             return elements.sum()
         } else {
@@ -18,7 +28,7 @@ class Calculator implements Operations {
     }
 
     @Override
-    Double subtract(List elements) {
+    Double subtract(List elements) throws RemoteException {
         if (elements) {
             def result = elements[0];
             elements.remove(0)
@@ -33,7 +43,7 @@ class Calculator implements Operations {
     }
 
     @Override
-    Double multiply(List elements) {
+    Double multiply(List elements) throws RemoteException {
         def result = 1
         if (elements) {
             elements.each {
@@ -46,7 +56,7 @@ class Calculator implements Operations {
     }
 
     @Override
-    Double divide(List elements) throws Exception {
+    Double divide(List elements) throws Exception,RemoteException {
         if (elements) {
             def result = elements[0];
             elements.remove(0)
@@ -60,12 +70,12 @@ class Calculator implements Operations {
     }
 
     @Override
-    def Object linearSearch(List elements, def element) {
+    def Object linearSearch(List elements, def element) throws RemoteException {
         return elements.find { it == element }
     }
 
     @Override
-    def Object binarySearch(List elements, def element) {
+    def Object binarySearch(List elements, def element) throws RemoteException {
         if (elements) {
             def sortedElements = elements?.sort()
             def index = Collections.binarySearch(sortedElements, element)
@@ -78,7 +88,7 @@ class Calculator implements Operations {
     }
 
     @Override
-    List selectionSort(List elements) {
+    List selectionSort(List elements) throws RemoteException {
         if (elements) {
             for (i in 0..elements.size() - 1) {
                 def curr = i
@@ -100,12 +110,12 @@ class Calculator implements Operations {
     }
 
     @Override
-    List quickSort(List elements) {
+    List quickSort(List elements) throws RemoteException {
         return elements?.sort()
     }
 
     @Override
-    List mergeSort(List elements) {
+    List mergeSort(List elements) throws RemoteException {
         def result
 
         if (elements?.size() <= 1) {
@@ -159,4 +169,5 @@ class Calculator implements Operations {
 
         return result
     }
+
 }
