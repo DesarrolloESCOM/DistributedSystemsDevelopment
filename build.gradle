@@ -8,8 +8,11 @@ repositories {
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.7'
     compile 'org.codehaus.groovy:groovy-all:2.4.3'
+    compile('org.eclipse.jetty:jetty-server:8.1.8.v20121106')
+    compile('org.eclipse.jetty:jetty-servlet:8.1.8.v20121106')
+    compile('javax.servlet:javax.servlet-api:3.0.1')
+    compile('org.eclipse.jetty.orbit:javax.servlet')
     testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
-    compile 'log4j:log4j:1.2.17'
     testCompile "junit:junit:4.11"
 }
 /*
@@ -59,17 +62,11 @@ task Ex3_LamportSimulation (dependsOn:'classes',type:JavaExec){
 }
 
 /*
-* Gradle tasks for Exercise #4
+* Gradle tasks for Restful Calc
 * */
 
-/*task Ex4_RMI_Compile (type:GroovyCompile){
-    description = "Exercise 4: Compile rmi classes"
-    source = sourceSets.main.java.exercises.EX4.rmi
+task RestCalc(dependsOn:'classes',type:JavaExec){
+    description = "Restful server Calculator "
+    main = 'exercises.RestCalc.Main'
     classpath = sourceSets.main.runtimeClasspath
-    desinationDir = 'build/rmi'
 }
-
-task Ex4_RMI_Stub (type:GroovyCompile){
-    description = "Exercise 4: Generate Stubs"
-    source = sourceSets.main.java.exercises.EX4.rmi
-}*/

@@ -5,10 +5,9 @@ package exercises.EX2.math
  */
 import groovy.util.logging.*
 
-class Calculator implements Operations {
+class Calculator {
 
-    @Override
-    Double sum(def List elements) {
+    def sum(List elements) {
         if (elements) {
             return elements.sum()
         } else {
@@ -17,8 +16,7 @@ class Calculator implements Operations {
 
     }
 
-    @Override
-    Double subtract(List elements) {
+    def subtract(List elements) {
         if (elements) {
             def result = elements[0];
             elements.remove(0)
@@ -32,8 +30,7 @@ class Calculator implements Operations {
 
     }
 
-    @Override
-    Double multiply(List elements) {
+    def multiply(List elements) {
         def result = 1
         if (elements) {
             elements.each {
@@ -45,8 +42,7 @@ class Calculator implements Operations {
         }
     }
 
-    @Override
-    Double divide(List elements) throws Exception {
+    def divide(List elements) throws Exception {
         if (elements) {
             def result = elements[0];
             elements.remove(0)
@@ -59,13 +55,11 @@ class Calculator implements Operations {
         }
     }
 
-    @Override
-    def Object linearSearch(List elements, def element) {
+    def linearSearch(List elements, def element) {
         return elements.find { it == element }
     }
 
-    @Override
-    def Object binarySearch(List elements, def element) {
+    def binarySearch(List elements, def element) {
         if (elements) {
             def sortedElements = elements?.sort()
             def index = Collections.binarySearch(sortedElements, element)
@@ -77,8 +71,7 @@ class Calculator implements Operations {
         return null
     }
 
-    @Override
-    List selectionSort(List elements) {
+    def selectionSort(List elements) {
         if (elements) {
             for (i in 0..elements.size() - 1) {
                 def curr = i
@@ -99,13 +92,11 @@ class Calculator implements Operations {
 
     }
 
-    @Override
-    List quickSort(List elements) {
+    def quickSort(List elements) {
         return elements?.sort()
     }
 
-    @Override
-    List mergeSort(List elements) {
+    def mergeSort(List elements) {
         def result
 
         if (elements?.size() <= 1) {
