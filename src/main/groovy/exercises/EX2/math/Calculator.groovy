@@ -21,7 +21,7 @@ class Calculator {
             def result = elements[0];
             elements.remove(0)
             elements.each {
-                result -= it;
+                result -= Double.parseDouble("$it");
             }
             return result
         } else {
@@ -34,7 +34,7 @@ class Calculator {
         def result = 1
         if (elements) {
             elements.each {
-                result *= it;
+                result *= Double.parseDouble("$it");
             }
             return result
         } else {
@@ -44,10 +44,10 @@ class Calculator {
 
     def divide(List elements) throws Exception {
         if (elements) {
-            def result = elements[0];
+            def result = Double.parseDouble(elements[0]);
             elements.remove(0)
             elements.each {
-                result /= it;
+                result /= Double.parseDouble("$it");
             }
             return result
         } else {
